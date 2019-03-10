@@ -1,0 +1,93 @@
+#droparea {
+    overflow: hidden;
+    padding: 40px 10px;
+    background: #ddd;
+    border: 3px #666 dashed;
+    solid: 1em;
+    color: #999;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#dropArea.dragover,
+#dropArea:active {
+    background: #cfc;
+    border-color: #9c9;
+    color: #9c9;
+}
+
+#fileInput {
+    display: none;
+}
+
+#viewarea {
+    text-align: center;
+    background: #ddd;
+    border: 3px #666 dashed;
+    margin: 5px 0px;
+}
+
+#viewarea img {
+    display: block;
+    margin: 15px auto;
+}
+#image_cut {
+    display: block;
+    margin: 15px auto;
+}
+
+#viewcutimg {
+    text-align: center;
+    background: #ddd;
+    border: 3px #666 dashed;
+    margin: 5px 0px;
+}
+
+body {
+    background-color: #fbf5f5fa;
+}
+#start {
+    background-color: #9e9e9e9e;
+    padding: 0px 10px;
+}
+
+#loading {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+#loading .loadingMsg {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 140px;
+  background: url("gif-load.gif") center center no-repeat;
+}
+
+.js-slider{
+  position:relative;
+  width:255px;
+  height:20px;
+}
+.js-slider div{
+  background:#ddd;
+  height:3px;
+  border:1px inset #aaa;
+  position:relative;
+  top:12px;
+  font-size:0px;
+}
+.js-slider input{
+  position:absolute;
+  width:15px;
+  height:20px;
+  display:block;
+}

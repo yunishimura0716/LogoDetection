@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="{% static 'app/css/style1.css' %}">
+    <title>Auto</title>
+</head>
+<body>
+    <div>
+        <h>SelectOption</h>
+        <p>閾値入力：0 ~ 255 の間の数字を入力してください（入力がない場合は自動で閾値が設けられます）</p>
+        <form class="js-slider-form" onsubmit="return false;">
+            <input type="text" id="threshold" maxlength="3">
+            <div id="slider1" class="js-slider">
+                <div></div>
+                <input type="button" value="">
+            </div>
+        </form>
+        <p>切り抜き反転</p>
+        <form id="reverse">
+            <input type="radio" name="trans" value='1'>有
+            <input type="radio" name='trans' value='0' checked="checked">無
+        </form>
+
+    </div>
+    <form method="post">{% csrf_token %}
+{#        {{ form.as_p }}#}
+{#        <input type="submit" name="button" value="START">#}
+    </form>
+    <bottun id="start">start</bottun>
+{#    <bottun id="save">save</bottun>#}
+
+    <div id="droparea">
+        Drop or Click here!
+        <input type="file" name="file" id="file">
+    </div>
+{#    <input id="fileInput" type="'file" accept="image/*" multiple>#}
+    <div id="viewarea">
+        <h>入力画像</h>
+        <img id='viewimg'>
+    </div>
+    <div id="viewcutimg">
+        <h>切り抜き画像</h>
+        <img id="image_cut">
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'app/js/script1.js' %}"></script>
+</body>
+</html>
