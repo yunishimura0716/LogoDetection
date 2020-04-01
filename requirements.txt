@@ -6,7 +6,7 @@ astor==0.6.2
 backcall==0.1.0
 beautifulsoup4==4.6.0
 billiard==3.5.0.4
-bleach==1.5.0
+bleach==3.1.4
 bottle==0.12.13
 bs4==0.0.1
 cachetools==2.1.0
@@ -41,7 +41,11 @@ Markdown==2.6.11
 matplotlib==3.0.1
 numpy==1.14.3
 opencv-python==3.4.2.17
+<<<<<<< HEAD
 Pillow==6.2.2
+=======
+Pillow==6.2.0
+>>>>>>> 49eb10eb52483ba1415881ceb6ac8c0b975a6652
 protobuf==3.6.1
 psycopg2==2.7.5
 psycopg2-binary==2.7.5
@@ -58,7 +62,11 @@ six==1.11.0
 sklearn==0.0
 static3==0.7.0
 tensorboard==1.10.0
+<<<<<<< HEAD
 tensorflow==1.15.2
+=======
+tensorflow==1.15.0
+>>>>>>> 49eb10eb52483ba1415881ceb6ac8c0b975a6652
 termcolor==1.1.0
 vine==1.1.4
 Werkzeug==0.15.3
