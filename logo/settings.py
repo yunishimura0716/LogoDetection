@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'logo.wsgi.application'
 # for server environment
 if HEROKU_ENV:
     DATABASES = {
-        'default': dj_database_url.config(default=config('DATABASE_URL'))
+        'default': dj_database_url.config(default=env('DATABASE_URL'))
     }
 else:
     DATABASES = {
