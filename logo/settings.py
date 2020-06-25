@@ -37,7 +37,7 @@ DEBUG=env.bool('DEBUG', False)
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['gentle-scrubland-58843.herokuapp.com', 'logodetection.com', 'www.logodetection.com']
 
 
 # Application definition
