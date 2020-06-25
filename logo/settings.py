@@ -95,8 +95,13 @@ WSGI_APPLICATION = 'logo.wsgi.application'
 #     }
 # }
 # for server environment
+if HEROKU_ENV:
+    DATABASE_URL = 'postgresql://<postgresql>'
+else:
+    DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
