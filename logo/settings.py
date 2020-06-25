@@ -103,8 +103,9 @@ else:
     DATABASE_NAME = os.path.join(BASE_DIR, 'db.sqlite3')
 
 DATABASES = {
-    'default': dj_database_url.config(default=DATABASE_URL)
+    'default': dj_database_url.config()
 }
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 # DATABASES['default']['NAME'] = DATABASE_NAME
 
 
