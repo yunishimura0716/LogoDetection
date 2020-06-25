@@ -105,7 +105,7 @@ else:
 DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL)
 }
-DATABASES['default']['NAME'] = DATABASE_NAME
+# DATABASES['default']['NAME'] = DATABASE_NAME
 
 
 # Password validation
@@ -158,7 +158,7 @@ STATICFILES_DIRS = (
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+
+import django_heroku
+# Activate Django-Heroku.
+django_heroku.settings(locals())
