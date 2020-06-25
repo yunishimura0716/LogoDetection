@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn logo.wsgi
+web: gunicorn logo:app
