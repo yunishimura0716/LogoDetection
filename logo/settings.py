@@ -90,9 +90,11 @@ WSGI_APPLICATION = 'logo.wsgi.application'
 # for local environment
 # for server environment
 if HEROKU_ENV:
-    DATABASES = {
-        'default': dj_database_url.config()
-    }
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
+    # DATABASES = {
+    #     'default': dj_database_url.config()
+    # }
 else:
     DATABASES = {
         'default': {
